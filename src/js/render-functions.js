@@ -46,7 +46,7 @@ function createMarkup(data) {
 
   // відмальовуємо за раз все що сформували
   galleryImg.insertAdjacentHTML("beforeend", htmlListOfGallery);
-  // galleryImg.innerHTML = htmlListOfGallery;
+  console.log(htmlListOfGallery);
   
   lightbox.refresh();
   
