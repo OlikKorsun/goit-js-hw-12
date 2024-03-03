@@ -146,8 +146,9 @@ function loadMorePictures() {
             const totalPage = Math.ceil(resp.data.totalHits / perPage);
             // вираховуємо висоту рядка з картинками
             const heightOfImg = galleryImg.firstElementChild.getBoundingClientRect().height;
-            // область видимості вікна прокручується на 2 висоти картинки згідно умови ТЗ
-            window.scrollBy({ top: heightOfImg * 2, behavior: 'smooth' });
+            // область видимості вікна прокручується на 4 висоти картинки 
+            // згідно умови ТЗ треба було на 2, але 2 норм якщо 3 рядка, а коли 5 - це замало
+            window.scrollBy({ top: heightOfImg * 4, behavior: 'smooth' });
             // перевірка чи не дібрались ми до кінця колекції картинок
             if (current_page < totalPage) {
                 createMarkup(resp.data.hits);
