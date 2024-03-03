@@ -37,7 +37,7 @@ export async function getData(query, page) {
                     });
                    return;
                } else {
-                   createMarkup(resp.data);
+                   createMarkup(resp.data.hits);
                       }
           })
         .catch(error => {
